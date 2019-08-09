@@ -1,0 +1,15 @@
+{
+  "name": "dog-personality",
+  "version": "1.0.0",
+  "description": "A dog personality test using promises",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tyler Trout",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1"
+  }
+}
