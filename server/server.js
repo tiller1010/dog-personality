@@ -3,7 +3,8 @@ const axios = require('axios');
 const expressHandlebars  = require('express-handlebars');
 const port = process.env.PORT || 3000;
 
-const functions = require('./functions.js');
+const functions = require('./functions');
+const sharedData = require('./sharedData')
 
 var app = express();
 var hbs = expressHandlebars({extname: '.hbs'});
@@ -31,7 +32,14 @@ app.get('/quiz', (req, res) => {
 });
 
 app.post('/quiz/quiz-submission', (req, res) => {
-	res.send('You are ' + req.body.temper);
+	let temper = req.body.temper;
+	if(sharedData[temper]){
+		sharedData[temper] = sharedData[temper] + 1;
+	}
+	else{
+		sharedData[temper] = 1;
+	}
+	res.render('quiz', {layout: false, sharedData: sharedData});
 });
 
 
