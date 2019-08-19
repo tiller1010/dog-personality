@@ -12,3 +12,15 @@ const randomDog = (arr) => {
 	}
 }
 module.exports.randomDog = randomDog;
+
+const handleSubmit = (temper) => {
+	let results = {};
+	if(results[temper]){
+		results[temper] = results[temper] + 1;
+	}
+	else{
+		results[temper] = 1;
+	}
+	return results;
+}
+module.exports.handleSubmit = handleSubmit;

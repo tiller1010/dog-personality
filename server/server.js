@@ -4,10 +4,12 @@ const expressHandlebars  = require('express-handlebars');
 const port = process.env.PORT || 3000;
 
 const functions = require('./functions');
-const sharedData = require('./sharedData')
 
 var app = express();
-var hbs = expressHandlebars({extname: '.hbs'});
+var hbs = expressHandlebars({
+	extname: '.hbs',
+	defaultLayout: false
+});
 
 app.engine('.hbs', hbs);
 app.set('view engine', '.hbs');
@@ -24,22 +26,16 @@ axios.get(`https://api.thedogapi.com/v1/breeds`)
 
 
 app.get('/', (req, res) => {
-	res.render('home', {layout: false});
+	res.render('home');
 });
 
 app.get('/quiz', (req, res) => {
-	res.render('quiz', {layout: false});
+	res.render('quiz');
 });
 
 app.post('/quiz/quiz-submission', (req, res) => {
-	let temper = req.body.temper;
-	if(sharedData[temper]){
-		sharedData[temper] = sharedData[temper] + 1;
-	}
-	else{
-		sharedData[temper] = 1;
-	}
-	res.render('quiz', {layout: false, sharedData: sharedData});
+	let results = functions.handleSubmit(req.body.temper);
+	res.render('quiz', {results: JSON.stringify(results)});
 });
 
 
