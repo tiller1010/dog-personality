@@ -29,14 +29,15 @@ app.get('/', (req, res) => {
 	res.render('home');
 });
 
-app.get('/quiz', (req, res) => {
-	res.render('quiz');
+app.get('/quiz/:qstn', (req, res) => {
+	let results = functions.handleSubmit(req.body.temper);
+	res.render('quiz', {question: req.params.qstn, results: JSON.stringify(results)});
 });
 
-app.post('/quiz/quiz-submission', (req, res) => {
-	let results = functions.handleSubmit(req.body.temper);
-	res.render('quiz', {results: JSON.stringify(results)});
-});
+// app.post('/quiz/quiz-submission', (req, res) => {
+// 	let results = functions.handleSubmit(req.body.temper);
+// 	res.render('quiz', {results: JSON.stringify(results)});
+// });
 
 
 app.listen(port);

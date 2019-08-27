@@ -5,14 +5,8 @@
 </head>
 <body>
 	<h1>What kind of person are you</h1>
-	<form action="quiz/quiz-submission" method="POST">
-		<select name="temper">
-			<option>Playful</option>
-			<option>Keen</option>
-		</select>
-		<input type="submit"/>
-	</form>
+	{{> question1}}
 	{{results}}
+	{{question}}
 </body>
 </html>
-
