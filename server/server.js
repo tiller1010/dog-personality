@@ -52,5 +52,10 @@ app.get('/quiz/:questionNumber', (req, res) => {
 	res.render('quiz', questionData);
 });
 
+app.get('/reset', (req, res) => {
+	results = {};
+	res.render('home');
+});
+
 
 app.listen(port);
