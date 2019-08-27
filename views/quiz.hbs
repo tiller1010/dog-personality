@@ -4,9 +4,21 @@
         <title>What Dog are You</title>
 </head>
 <body>
-	<h1>What kind of person are you</h1>
-	{{> question1}}
+
+	{{> header}}
+
+	<h1>{{question}}</h1>
+
+	<form action="/quiz/{{nextQuestion}}" method="GET">
+		<h2>Question {{questionNumber}}</h2>
+		<select name="temper">
+			<option>{{answer1}}</option>
+			<option>{{answer2}}</option>
+			<option>{{answer3}}</option>
+		</select>
+		<input type="submit"/>
+	</form>
+
 	{{results}}
-	{{question}}
 </body>
 </html>

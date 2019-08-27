@@ -5,6 +5,9 @@ const port = process.env.PORT || 3000;
 
 const functions = require('./functions');
 
+var results = require('./sharedData.js').results;
+var questions = require('./sharedData.js').questions;
+
 var app = express();
 var hbs = expressHandlebars({
 	extname: '.hbs',
@@ -29,15 +32,25 @@ app.get('/', (req, res) => {
 	res.render('home');
 });
 
-app.get('/quiz/:qstn', (req, res) => {
-	let results = functions.handleSubmit(req.body.temper);
-	res.render('quiz', {question: req.params.qstn, results: JSON.stringify(results)});
-});
+app.get('/quiz/:questionNumber', (req, res) => {
 
-// app.post('/quiz/quiz-submission', (req, res) => {
-// 	let results = functions.handleSubmit(req.body.temper);
-// 	res.render('quiz', {results: JSON.stringify(results)});
-// });
+	let questionNumber = Number(req.params.questionNumber);
+	let nextQuestion = questionNumber + 1;
+
+	functions.handleSubmit(req.query.temper);
+
+	let questionData = {
+		question: questions[questionNumber - 1].question,
+		answer1: questions[questionNumber - 1].answer1,
+		answer2: questions[questionNumber - 1].answer2,
+		answer3: questions[questionNumber - 1].answer3,
+		questionNumber,
+		nextQuestion,
+		results: JSON.stringify(results)
+	}
+
+	res.render('quiz', questionData);
+});
 
 
 app.listen(port);
