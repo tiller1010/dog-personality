@@ -28,8 +28,9 @@ axios.get(`https://api.thedogapi.com/v1/breeds`)
 	});
 
 
-app.get('/', (req, res) => {
-	res.render('home');
+app.get('/:questionNumber?', (req, res) => {
+	let questionNumber = Number(req.params.questionNumber) || 1;
+	res.render('home', {questionNumber});
 });
 
 app.get('/quiz/:questionNumber', (req, res) => {
