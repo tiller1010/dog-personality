@@ -41,7 +41,8 @@ app.get('/quiz/question/:questionNumber', (req, res) => {
 	functions.handleSubmit(req.query.temper);
 
 	if(questions[questionIndex] === undefined){
-		res.send('Yay the results are in');
+		res.render('results', results.data);
+		results.reset();
 	}
 	else{
 		var questionData = {

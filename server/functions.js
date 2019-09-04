@@ -22,7 +22,6 @@ const handleSubmit = (temper) => {
 		else{
 			results[temper] = 1;
 		}
-		console.log(results)
 		return results;
 	}
 }
