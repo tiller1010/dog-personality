@@ -9,7 +9,7 @@
 
 	<h1>{{question}}</h1>
 
-	<form action="/quiz/{{nextQuestion}}" method="GET">
+	<form action="/quiz/question/{{nextQuestion}}" method="GET">
 		<h2>Question {{questionNumber}}</h2>
 		<select name="temper">
 			<option>{{answer1}}</option>
@@ -22,7 +22,7 @@
 	{{results}}
 
 	<div>
-		<a href="/reset">Restart Test</a>
+		<a href="/quiz/reset">Restart Test</a>
 	</div>
 
 </body>

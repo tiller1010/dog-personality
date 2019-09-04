@@ -5,7 +5,6 @@ const port = process.env.PORT || 3000;
 
 const functions = require('./functions');
 
-var results = require('./sharedData.js').results;
 var questions = require('./sharedData.js').questions;
 
 var app = express();
@@ -33,8 +32,8 @@ app.get('/:questionNumber?', (req, res) => {
 	res.render('home', {questionNumber});
 });
 
-app.get('/quiz/:questionNumber', (req, res) => {
-
+app.get('/quiz/question/:questionNumber', (req, res) => {
+	var results = require('./sharedData.js').results;
 	let questionNumber = Number(req.params.questionNumber);
 	let questionIndex = questionNumber - 1;
 	let nextQuestion = questionNumber + 1;
@@ -59,13 +58,10 @@ app.get('/quiz/:questionNumber', (req, res) => {
 	}
 });
 
-app.get('/reset', (req, res) => {
+app.get('/quiz/reset', (req, res) => {
+	var results = require('./sharedData.js').results;
 	results.reset();
-	res.render('home');
-});
-
-app.get('/quiz/result-screen', (req, res) => {
-	res.send('Yay the results page');
+	res.render('home', {questionNumber: 1});
 });
 
 app.listen(port);
