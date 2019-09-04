@@ -35,27 +35,36 @@ app.get('/', (req, res) => {
 app.get('/quiz/:questionNumber', (req, res) => {
 
 	let questionNumber = Number(req.params.questionNumber);
+	let questionIndex = questionNumber - 1;
 	let nextQuestion = questionNumber + 1;
 
 	functions.handleSubmit(req.query.temper);
 
-	let questionData = {
-		question: questions[questionNumber - 1].question,
-		answer1: questions[questionNumber - 1].answer1,
-		answer2: questions[questionNumber - 1].answer2,
-		answer3: questions[questionNumber - 1].answer3,
-		questionNumber,
-		nextQuestion,
-		results: JSON.stringify(results)
+	if(questions[questionIndex] === undefined){
+		res.send('Yay the results are in');
 	}
+	else{
+		var questionData = {
+			question: questions[questionIndex].question,
+			answer1: questions[questionIndex].answer1,
+			answer2: questions[questionIndex].answer2,
+			answer3: questions[questionIndex].answer3,
+			questionNumber,
+			nextQuestion,
+			results: JSON.stringify(results.data)
+		}
 
-	res.render('quiz', questionData);
+		res.render('quiz', questionData);
+	}
 });
 
 app.get('/reset', (req, res) => {
-	results = {};
+	results.reset();
 	res.render('home');
 });
 
+app.get('/quiz/result-screen', (req, res) => {
+	res.send('Yay the results page');
+});
 
 app.listen(port);

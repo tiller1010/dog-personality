@@ -1,4 +1,9 @@
-module.exports.results = {}
+module.exports.results = {
+	data: {},
+	reset: function(){
+		this.data = {}
+	}
+}
 
 module.exports.questions = [
 	

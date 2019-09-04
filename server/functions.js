@@ -1,5 +1,3 @@
-var results = require('./sharedData').results;
-
 const listAllProperties = (arr, property) => {
 	arr.forEach((obj) => {
 		console.log(property, obj[property]);		
@@ -16,6 +14,7 @@ const randomDog = (arr) => {
 module.exports.randomDog = randomDog;
 
 const handleSubmit = (temper) => {
+	var results = require('./sharedData').results.data;
 	if(temper !== undefined){
 		if(results[temper]){
 			results[temper] = results[temper] + 1;
@@ -23,6 +22,7 @@ const handleSubmit = (temper) => {
 		else{
 			results[temper] = 1;
 		}
+		console.log(results)
 		return results;
 	}
 }
