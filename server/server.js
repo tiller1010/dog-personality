@@ -19,8 +19,8 @@ app.use(express.urlencoded());
 
 axios.get(`https://api.thedogapi.com/v1/breeds`)
 	.then((response) => {
-		// functions.listAllProperties(response.data, 'name');
-		functions.randomDog(response.data);
+		//functions.listAllProperties(response.data, 'temperament');
+		// functions.randomDog(response.data);
 	})
 	.catch(() => {
 		console.log('No doggies :(')
@@ -41,7 +41,11 @@ app.get('/quiz/question/:questionNumber', (req, res) => {
 	functions.handleSubmit(req.query.temper);
 
 	if(questions[questionIndex] === undefined){
-		res.render('results', results.data);
+		let prominentTraits = functions.findProminentTraits(results.data);
+		res.render('results', {
+			results: JSON.stringify(results.data), 
+			prominentTraits: JSON.stringify(prominentTraits)
+		});
 		results.reset();
 	}
 	else{

@@ -26,3 +26,38 @@ const handleSubmit = (temper) => {
 	}
 }
 module.exports.handleSubmit = handleSubmit;
+
+const findProminentTraits = (data) => {
+	let firstTrait, secondTrait, thirdTrait;
+
+	let firstValue, secondValue, thirdValue;
+	firstValue = secondValue = thirdValue = 0;
+
+	for(trait in data){
+		if(data[trait] > thirdValue){
+			if(data[trait] > secondValue){
+				if(data[trait] > firstValue){
+					thirdTrait = secondTrait;
+					thirdValue = secondValue;
+					secondTrait = firstTrait;
+					secondValue = firstValue;
+					firstTrait = trait;
+					firstValue = data[trait];
+				}
+				else{
+					thirdTrait = secondTrait;
+					thirdValue = secondValue;
+					secondTrait = trait;
+					secondValue = data[trait];
+				}
+			}
+			else{
+				thirdTrait = trait;
+				thirdValue = data[trait];
+			}
+		}
+	}
+
+	return {firstTrait, secondTrait, thirdTrait}
+}
+module.exports.findProminentTraits = findProminentTraits;
