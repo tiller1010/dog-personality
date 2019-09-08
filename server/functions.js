@@ -61,3 +61,21 @@ const findProminentTraits = (data) => {
 	return {firstTrait, secondTrait, thirdTrait}
 }
 module.exports.findProminentTraits = findProminentTraits;
+
+const compareTemperamentData = (requestArr, resultObj) => {
+	requestArr.forEach((obj) => {
+		if(obj.temperament !== undefined){
+			let dogTemperament = obj.temperament.split(', ');
+			if(dogTemperament.indexOf(resultObj.firstTrait) > -1){
+				console.log(obj.name, ' has ', resultObj.firstTrait)
+			}
+			// dogTemperament.forEach((requestTrait) => {
+
+			// });
+			// for(i=0;i<dogTemperament.length;i++){
+
+			// }
+		}
+	});
+}
+module.exports.compareTemperamentData = compareTemperamentData;
