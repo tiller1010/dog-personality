@@ -63,19 +63,35 @@ const findProminentTraits = (data) => {
 module.exports.findProminentTraits = findProminentTraits;
 
 const compareTemperamentData = (requestArr, resultObj) => {
+	let mostMatched;
+	let matchingTraitsValue = 0;
 	requestArr.forEach((obj) => {
 		if(obj.temperament !== undefined){
 			let dogTemperament = obj.temperament.split(', ');
 			if(dogTemperament.indexOf(resultObj.firstTrait) > -1){
-				console.log(obj.name, ' has ', resultObj.firstTrait)
+				if(dogTemperament.indexOf(resultObj.secondTrait) > -1){
+					if(dogTemperament.indexOf(resultObj.thirdTrait) > -1){
+						console.log(obj.name, ' has ', resultObj.firstTrait, ' and ', resultObj.secondTrait, ' and ', resultObj.thirdTrait)
+						matchingTraitsValue = 3;
+						mostMatched = obj;
+					}
+					else{
+						if(matchingTraitsValue < 2){
+							matchingTraitsValue = 2;
+							mostMatched = obj;
+						}
+					}
+				}
+				else{
+					if(matchingTraitsValue < 1){
+						matchingTraitsValue = 1;
+						mostMatched = obj;
+					}
+				}
 			}
-			// dogTemperament.forEach((requestTrait) => {
-
-			// });
-			// for(i=0;i<dogTemperament.length;i++){
-
-			// }
 		}
 	});
+
+	return mostMatched;
 }
 module.exports.compareTemperamentData = compareTemperamentData;

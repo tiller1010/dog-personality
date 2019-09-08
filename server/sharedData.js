@@ -15,7 +15,7 @@ module.exports.questions = [
 	},
 	{
 		question: "What kind of dggger are you",
-		answer1: "Clownish",
+		answer1: "Docile",
 		answer2: "Keen",
 		answer3: "Affectionate"
 	},
@@ -27,7 +27,7 @@ module.exports.questions = [
 	},
 	{
 		question: "What kind of dggger are you",
-		answer1: "Clownish",
+		answer1: "Quiet",
 		answer2: "Keen",
 		answer3: "Affectionate"
 	},
@@ -51,7 +51,7 @@ module.exports.questions = [
 	},
 	{
 		question: "What kind of dogggggger are you",
-		answer1: "Playful",
+		answer1: "Docile",
 		answer2: "Keen",
 		answer3: "Reliable"
 	},
@@ -59,7 +59,7 @@ module.exports.questions = [
 		question: "What kind of dggger are you",
 		answer1: "Clownish",
 		answer2: "Keen",
-		answer3: "Affectionate"
+		answer3: "Docile"
 	},
 	{
 		question: "What kind of doger are you",

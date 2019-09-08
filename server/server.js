@@ -17,16 +17,6 @@ app.engine('.hbs', hbs);
 app.set('view engine', '.hbs');
 app.use(express.urlencoded());
 
-axios.get(`https://api.thedogapi.com/v1/breeds`)
-	.then((response) => {
-		//functions.listAllProperties(response.data, 'temperament');
-		//functions.randomDog(response.data);
-		//functions.compareTemperamentData(response.data, undefined)
-	})
-	.catch(() => {
-		console.log('No doggies :(')
-	});
-
 
 app.get('/:questionNumber?', (req, res) => {
 	let questionNumber = Number(req.params.questionNumber) || 1;
@@ -38,6 +28,7 @@ app.get('/quiz/question/:questionNumber', (req, res) => {
 	let questionNumber = Number(req.params.questionNumber);
 	let questionIndex = questionNumber - 1;
 	let nextQuestion = questionNumber + 1;
+	let mostMatched = {};
 
 	functions.handleSubmit(req.query.temper);
 
@@ -46,19 +37,18 @@ app.get('/quiz/question/:questionNumber', (req, res) => {
 
 		axios.get(`https://api.thedogapi.com/v1/breeds`)
 			.then((response) => {
-				//functions.listAllProperties(response.data, 'temperament');
-				//functions.randomDog(response.data);
-				functions.compareTemperamentData(response.data, prominentTraits);
+				mostMatched = functions.compareTemperamentData(response.data, prominentTraits);
+				res.render('results', {
+					results: JSON.stringify(results.data), 
+					prominentTraits: JSON.stringify(prominentTraits),
+					mostMatched: JSON.stringify(mostMatched)
+				});
+				results.reset();
 			})
 			.catch(() => {
 				console.log('No doggies :(')
 			});
 
-		res.render('results', {
-			results: JSON.stringify(results.data), 
-			prominentTraits: JSON.stringify(prominentTraits)
-		});
-		results.reset();
 	}
 	else{
 		var questionData = {
