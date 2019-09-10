@@ -53,9 +53,12 @@ app.get('/quiz/question/:questionNumber', (req, res) => {
 	else{
 		var questionData = {
 			question: questions[questionIndex].question,
-			answer1: questions[questionIndex].answer1,
-			answer2: questions[questionIndex].answer2,
-			answer3: questions[questionIndex].answer3,
+			answer1Answer: questions[questionIndex].answer1.Answer,
+			answer1Value: questions[questionIndex].answer1.Value,
+			answer2Answer: questions[questionIndex].answer2.Answer,
+			answer2Value: questions[questionIndex].answer2.Value,
+			answer3Answer: questions[questionIndex].answer3.Answer,
+			answer3Value: questions[questionIndex].answer3.Value,
 			questionNumber,
 			nextQuestion,
 			results: JSON.stringify(results.data)

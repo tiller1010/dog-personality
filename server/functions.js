@@ -71,7 +71,6 @@ const compareTemperamentData = (requestArr, resultObj) => {
 			if(dogTemperament.indexOf(resultObj.firstTrait) > -1){
 				if(dogTemperament.indexOf(resultObj.secondTrait) > -1){
 					if(dogTemperament.indexOf(resultObj.thirdTrait) > -1){
-						console.log(obj.name, ' has ', resultObj.firstTrait, ' and ', resultObj.secondTrait, ' and ', resultObj.thirdTrait)
 						matchingTraitsValue = 3;
 						mostMatched = obj;
 					}

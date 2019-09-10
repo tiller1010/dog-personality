@@ -9,11 +9,19 @@
 
 	<form action="/quiz/question/{{nextQuestion}}" method="GET">
 		<h2>Question {{questionNumber}}</h2>
-		<select name="temper">
-			<option>{{answer1}}</option>
-			<option>{{answer2}}</option>
-			<option>{{answer3}}</option>
-		</select>
+
+		<div>
+			{{answer1Answer}}: <input type="radio" name="temper" value="{{answer1Value}}"/>
+		</div>
+
+		<div>
+			{{answer2Answer}}: <input type="radio" name="temper" value="{{answer2Value}}"/>
+		</div>
+
+		<div>
+			{{answer3Answer}}: <input type="radio" name="temper" value="{{answer3Value}}"/>
+		</div>
+		
 		<input type="submit"/>
 	</form>
 
