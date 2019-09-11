@@ -23,78 +23,78 @@ module.exports.questions = [
 		},
 	},
 	{
-		question: "What kind of dggger are you",
+		question: "You have to see the doctor, what do you do?",
 		answer1: {
-			Answer: "",
-			Value: "Docile"
+			Answer: "Protest that you feel healthy already",
+			Value: "Stubborn"
 		},
 		answer2: {
-			Answer: "",
+			Answer: "Jump in the car and stick your head outside the window",
+			Value: "Adventurous"
+		},
+		answer3: {
+			Answer: "Jump in and around the car the whole way",
+			Value: "Active"
+		},
+	},
+	{
+		question: "You are at a place where others are unfimiliar...",
+		answer1: {
+			Answer: "Challenge someone to a race!",
+			Value: "Playful"
+		},
+		answer2: {
+			Answer: "Take in the scenery, but don't socialize",
+			Value: "Quiet"
+		},
+		answer3: {
+			Answer: "Introduce yourself",
+			Value: "Sociable"
+		},
+	},
+	{
+		question: "When you are hungry, what do you do?",
+		answer1: {
+			Answer: "Find your own food",
+			Value: "Independent"
+		},
+		answer2: {
+			Answer: "Open the drawer where the food is",
 			Value: "Keen"
 		},
 		answer3: {
-			Answer: "",
+			Answer: "Stare at someone's food until you get some",
 			Value: "Affectionate"
 		},
 	},
 	{
-		question: "What kind of doger are you",
+		question: "You are going on a hike, what are you going to do?",
 		answer1: {
-			Answer: "",
-			Value: "Playful"
+			Answer: "Encourage others with you",
+			Value: "Happy"
 		},
 		answer2: {
-			Answer: "",
-			Value: "Quiet"
+			Answer: "Lead ahead to point the way",
+			Value: "Dutiful"
 		},
 		answer3: {
-			Answer: "",
-			Value: "Keen"
+			Answer: "Go out and adventure!",
+			Value: "Courageous"
 		},
 	},
 	{
-		question: "What kind of dggger are you",
+		question: "You hear a loud noise from outside...",
 		answer1: {
-			Answer: "",
-			Value: "Quiet"
+			Answer: "Make a lot of noise back!",
+			Value: "Wild"
 		},
 		answer2: {
-			Answer: "",
-			Value: "Keen"
+			Answer: "Turn your attention to the source of the noise",
+			Value: "Alert"
 		},
 		answer3: {
-			Answer: "",
-			Value: "Affectionate"
-		},
-	},
-	{
-		question: "What kind of dogggggger are you",
-		answer1: {
-			Answer: "",
-			Value: "Playful"
-		},
-		answer2: {
-			Answer: "",
-			Value: "Keen"
-		},
-		answer3: {
-			Answer: "",
-			Value: "Reliable"
-		},
-	},
-	{
-		question: "What kind of doger are you",
-		answer1: {
-			Answer: "",
-			Value: "Playful"
-		},
-		answer2: {
-			Answer: "",
-			Value: "Quiet"
-		},
-		answer3: {
-			Answer: "",
-			Value: "Keen"
+			Answer: "Recognize the sound as familiar and remain calm",
+			Value: "Intelligent"
 		},
 	},
 	{
