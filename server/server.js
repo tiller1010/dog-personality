@@ -39,9 +39,8 @@ app.get('/quiz/question/:questionNumber', (req, res) => {
 			.then((response) => {
 				mostMatched = functions.compareTemperamentData(response.data, prominentTraits);
 				res.render('results', {
-					results: JSON.stringify(results.data), 
-					prominentTraits: JSON.stringify(prominentTraits),
-					mostMatched: JSON.stringify(mostMatched)
+					prominentTraits,
+					mostMatched
 				});
 				results.reset();
 			})
