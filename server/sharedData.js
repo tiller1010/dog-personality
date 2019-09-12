@@ -157,7 +157,7 @@ module.exports.questions = [
 			Value: "Gentle"
 		}
 	},
-		{
+	{
 		question: "",
 		answer1: {
 			Answer: "",
@@ -171,6 +171,7 @@ module.exports.questions = [
 			Answer: "",
 			Value: "Sociable"
 		}
+	},
 	{
 		question: "",
 		answer1: {
