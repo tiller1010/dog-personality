@@ -98,63 +98,63 @@ module.exports.questions = [
 		},
 	},
 	{
-		question: "What kind of dggger are you",
+		question: "Your companion seems sad",
 		answer1: {
-			Answer: "",
+			Answer: "Sit beside your companion",
+			Value: "Loyal"
+		},
+		answer2: {
+			Answer: "Act natural and unaware",
+			Value: "Composed"
+		},
+		answer3: {
+			Answer: "Try to make him/her laugh",
 			Value: "Clownish"
 		},
+	},
+	{
+		question: "You smell an unfamiliar smell, what now?",
+		answer1: {
+			Answer: "Spring into action and investigate",
+			Value: "Alert"
+		},
 		answer2: {
-			Answer: "",
-			Value: "Keen"
+			Answer: "Alert everyone if the smell is dangerous",
+			Value: "Intelligent"
 		},
 		answer3: {
-			Answer: "",
-			Value: "Affectionate"
+			Answer: "Just sit there...",
+			Value: "Aloof"
 		},
 	},
 	{
-		question: "What kind of dogggggger are you",
+		question: "You see cats!",
 		answer1: {
-			Answer: "",
-			Value: "Docile"
+			Answer: "Get really worked up and loud",
+			Value: "Energetic"
 		},
 		answer2: {
-			Answer: "",
-			Value: "Keen"
+			Answer: "Intimidate the cat",
+			Value: "Willful"
 		},
 		answer3: {
-			Answer: "",
-			Value: "Reliable"
+			Answer: "Try to play!",
+			Value: "Joyful"
 		},
 	},
 	{
-		question: "What kind of dggger are you",
+		question: "How would fair in an obstacle course?",
 		answer1: {
-			Answer: "",
-			Value: "Clownish"
+			Answer: "I'd fair well and then some",
+			Value: "Agile"
 		},
 		answer2: {
-			Answer: "",
-			Value: "Keen"
+			Answer: "I'd made a good show for sure",
+			Value: "Clever"
 		},
 		answer3: {
-			Answer: "",
-			Value: "Docile"
-		},
-	},
-	{
-		question: "What kind of doger are you",
-		answer1: {
-			Answer: "",
-			Value: "Playful"
-		},
-		answer2: {
-			Answer: "",
-			Value: "Quiet"
-		},
-		answer3: {
-			Answer: "",
-			Value: "Keen"
+			Answer: "Pretty good I suppose",
+			Value: "Gentle"
 		},
 	}
 ];
