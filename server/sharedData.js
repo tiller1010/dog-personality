@@ -20,7 +20,7 @@ module.exports.questions = [
 		answer3: {
 			Answer: "Make sure to put it away when you're done",
 			Value: "Reliable"
-		},
+		}
 	},
 	{
 		question: "You have to see the doctor, what do you do?",
@@ -35,7 +35,7 @@ module.exports.questions = [
 		answer3: {
 			Answer: "Jump in and around the car the whole way",
 			Value: "Active"
-		},
+		}
 	},
 	{
 		question: "You are at a place where others are unfimiliar...",
@@ -50,7 +50,7 @@ module.exports.questions = [
 		answer3: {
 			Answer: "Introduce yourself",
 			Value: "Sociable"
-		},
+		}
 	},
 	{
 		question: "When you are hungry, what do you do?",
@@ -65,7 +65,7 @@ module.exports.questions = [
 		answer3: {
 			Answer: "Stare at someone's food until you get some",
 			Value: "Affectionate"
-		},
+		}
 	},
 	{
 		question: "You are going on a hike, what are you going to do?",
@@ -80,7 +80,7 @@ module.exports.questions = [
 		answer3: {
 			Answer: "Go out and adventure!",
 			Value: "Courageous"
-		},
+		}
 	},
 	{
 		question: "You hear a loud noise from outside...",
@@ -95,7 +95,7 @@ module.exports.questions = [
 		answer3: {
 			Answer: "Recognize the sound as familiar and remain calm",
 			Value: "Intelligent"
-		},
+		}
 	},
 	{
 		question: "Your companion seems sad",
@@ -110,7 +110,7 @@ module.exports.questions = [
 		answer3: {
 			Answer: "Try to make him/her laugh",
 			Value: "Clownish"
-		},
+		}
 	},
 	{
 		question: "You smell an unfamiliar smell, what now?",
@@ -125,7 +125,7 @@ module.exports.questions = [
 		answer3: {
 			Answer: "Just sit there...",
 			Value: "Aloof"
-		},
+		}
 	},
 	{
 		question: "You see cats!",
@@ -140,7 +140,7 @@ module.exports.questions = [
 		answer3: {
 			Answer: "Try to play!",
 			Value: "Joyful"
-		},
+		}
 	},
 	{
 		question: "How would fair in an obstacle course?",
@@ -155,7 +155,96 @@ module.exports.questions = [
 		answer3: {
 			Answer: "Pretty good I suppose",
 			Value: "Gentle"
+		}
+	},
+		{
+		question: "",
+		answer1: {
+			Answer: "",
+			Value: "Active"
 		},
+		answer2: {
+			Answer: "",
+			Value: "Quiet"
+		},
+		answer3: {
+			Answer: "",
+			Value: "Sociable"
+		}
+	{
+		question: "",
+		answer1: {
+			Answer: "",
+			Value: "Reliable"
+		},
+		answer2: {
+			Answer: "",
+			Value: "Stubborn"
+		},
+		answer3: {
+			Answer: "",
+			Value: "Adventurous"
+		}
+	},
+	{
+		question: "",
+		answer1: {
+			Answer: "",
+			Value: "Happy"
+		},
+		answer2: {
+			Answer: "",
+			Value: "Independent"
+		},
+		answer3: {
+			Answer: "",
+			Value: "Dutiful"
+		}
+	},
+	{
+		question: "",
+		answer1: {
+			Answer: "",
+			Value: "Wild"
+		},
+		answer2: {
+			Answer: "",
+			Value: "Aloof"
+		},
+		answer3: {
+			Answer: "",
+			Value: "Agile"
+		}
+	},	
+	{
+		question: "",
+		answer1: {
+			Answer: "",
+			Value: "Willful"
+		},
+		answer2: {
+			Answer: "",
+			Value: "Energetic"
+		},
+		answer3: {
+			Answer: "",
+			Value: "Gentle"
+		}
+	},
+	{
+		question: "",
+		answer1: {
+			Answer: "",
+			Value: "Joyful"
+		},
+		answer2: {
+			Answer: "",
+			Value: "Clever"
+		},
+		answer3: {
+			Answer: "",
+			Value: "Composed"
+		}
 	}
 ];
 
@@ -198,5 +287,7 @@ var traits = [
 	'Calm',
 	'Joyful',
 	'Willful',
-	'Energetic'
+	'Energetic',
+	'Adventurous',
+	'Quiet'
 ];
