@@ -17,6 +17,7 @@ var hbs = expressHandlebars({
 app.engine('.hbs', hbs);
 app.set('view engine', '.hbs');
 app.use(express.urlencoded());
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/:questionNumber?', (req, res) => {
