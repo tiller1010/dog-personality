@@ -158,92 +158,92 @@ module.exports.questions = [
 		}
 	},
 	{
-		question: "",
+		question: "What do you like about camping?",
 		answer1: {
-			Answer: "",
+			Answer: "Playing all day!",
 			Value: "Active"
 		},
 		answer2: {
-			Answer: "",
+			Answer: "Sleeping in...",
 			Value: "Quiet"
 		},
 		answer3: {
-			Answer: "",
+			Answer: "The campfires",
 			Value: "Sociable"
 		}
 	},
 	{
-		question: "",
+		question: "You're playing with your friends and you hear your name called",
 		answer1: {
-			Answer: "",
+			Answer: "Go find who called you",
 			Value: "Reliable"
 		},
 		answer2: {
-			Answer: "",
+			Answer: "Pretend you didn't hear that and keep playing",
 			Value: "Stubborn"
 		},
 		answer3: {
-			Answer: "",
+			Answer: "Notice the call but go away from the source",
 			Value: "Adventurous"
 		}
 	},
 	{
-		question: "",
+		question: "Would you be considered as a leader?",
 		answer1: {
-			Answer: "",
+			Answer: "No, but I don't have to be",
 			Value: "Happy"
 		},
 		answer2: {
-			Answer: "",
+			Answer: "Yes, I lead myself",
 			Value: "Independent"
 		},
 		answer3: {
-			Answer: "",
+			Answer: "Yes indeed",
 			Value: "Dutiful"
 		}
 	},
 	{
-		question: "",
+		question: "A toy is thrown at you!",
 		answer1: {
-			Answer: "",
+			Answer: "Freak out and grab the toy",
 			Value: "Wild"
 		},
 		answer2: {
-			Answer: "",
+			Answer: "Act like that didn't just happen",
 			Value: "Aloof"
 		},
 		answer3: {
-			Answer: "",
+			Answer: "Dodge the toy and pick it up",
 			Value: "Agile"
 		}
 	},	
 	{
-		question: "",
+		question: "A rival approaches...",
 		answer1: {
-			Answer: "",
+			Answer: "Challenge the rival",
 			Value: "Willful"
 		},
 		answer2: {
-			Answer: "",
+			Answer: "Run around to impress the rival",
 			Value: "Energetic"
 		},
 		answer3: {
-			Answer: "",
+			Answer: "Act unaware of the rival's presence",
 			Value: "Gentle"
 		}
 	},
 	{
-		question: "",
+		question: "You are tricked!",
 		answer1: {
-			Answer: "",
+			Answer: "Smile at foolery",
 			Value: "Joyful"
 		},
 		answer2: {
-			Answer: "",
+			Answer: "Find a way to fool them back",
 			Value: "Clever"
 		},
 		answer3: {
-			Answer: "",
+			Answer: "Just shrug it off and go your way",
 			Value: "Composed"
 		}
 	}
