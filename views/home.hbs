@@ -2,11 +2,19 @@
 <html>
 {{> head}}
 <body>
-	{{> header}}
-	<div class="home banner"></div>
-	<div class="start-quiz">
-		<a href='/quiz/question/{{questionNumber}}'>Take the quiz!</a>
+
+	<div class="container"> 
+
+		{{> header}}
+
+		<div class="home banner"></div>
+		<div class="start-quiz">
+			<a href='/quiz/question/{{questionNumber}}'>Take the quiz!</a>
+		</div>
+
 	</div>
+
 	{{> footer}}
+
 </body>
 </html>

@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Roboto+Condensed&display=swap");
 body {
   background-color: #555;
-  max-width: 790px;
-  margin: 0 auto;
-  font-family: 'Roboto Condensed', sans-serif;
-  position: relative; }
+  font-family: 'Roboto Condensed', sans-serif; }
   body * {
     color: #fff; }
+
+.container {
+  max-width: 790px;
+  margin: 0 auto 280px;
+  position: relative; }
 
 header {
   background-color: #8B978B;
@@ -34,25 +36,38 @@ header {
   text-align: center;
   margin: 131px 0; }
   .start-quiz a {
-    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #99999999;
+    padding: 20px 70px;
     text-shadow: 2px 2px 2px #999;
     font-size: 3em;
-    transition: color .2s linear; }
+    transition: background-color .2s linear; }
     .start-quiz a:hover {
+      background-color: #dfefffc9;
       color: #007900; }
 
 .content {
   width: 80%;
-  margin: 0 auto;
+  margin: 5px auto;
   background-color: #555555dd;
-  padding: 0 15px; }
+  padding: 2px 15px; }
 
 form {
   width: 100%; }
-  form div {
+  form .answer-container {
     width: 80%;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    min-height: 20px;
+    cursor: pointer;
+    background-color: #222;
+    padding: 15px;
+    margin: 6px auto;
+    transition: background-color .2s linear; }
+    form .answer-container:hover {
+      background-color: #262; }
+    form .answer-container input {
+      cursor: pointer; }
   form .submit {
     width: 45%;
     margin: 40px auto;
@@ -61,10 +76,22 @@ form {
     border-radius: 30px;
     border: none;
     cursor: pointer;
-    background-color: #6faf9a;
+    background-color: #3c827e;
     transition: background-color .5s linear; }
     form .submit:hover {
-      background-color: #3c827e; }
+      background-color: #72d69e; }
+
+.restart {
+  margin-top: 10px;
+  margin-left: 20px; }
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #aaa;
+  width: 100%;
+  position: absolute;
+  left: 0; }
 
 @media (max-width: 850px) {
   h1 {

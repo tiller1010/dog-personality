@@ -8,13 +8,16 @@ $color-primary-4: #007900;
 
 body{
 	background-color: #555;
-	max-width: 790px;
-	margin: 0 auto;
 	font-family: 'Roboto Condensed', sans-serif;
-	position: relative;
 	*{
 		color: #fff;
 	}
+}
+
+.container{
+	max-width: 790px;
+	margin: 0 auto 280px;
+	position: relative;
 }
 
 header{
@@ -52,11 +55,14 @@ header{
 	text-align: center;
 	margin: 131px 0;
 	a{
-		padding: 10px 20px;
+		text-decoration: none;
+		background-color: #99999999;
+		padding: 20px 70px;
 		text-shadow: 2px 2px 2px #999;
 		font-size: 3em;
-		transition: color .2s linear;
+		transition: background-color .2s linear;
 		&:hover{
+			background-color: #dfefffc9;
 			color: $color-primary-4;
 		}
 	}
@@ -64,17 +70,29 @@ header{
 
 .content{
 	width: 80%;
-	margin: 0 auto;
+	margin: 5px auto;
 	background-color: #555555dd;
-    padding: 0 15px;
+    padding: 2px 15px;
 }
 
 form{
 	width: 100%;
-	div{
+	.answer-container{
 		width: 80%;
 		display: flex;
     	justify-content: space-between;
+    	min-height: 20px;
+    	cursor: pointer;
+    	background-color: #222;
+    	padding: 15px;
+    	margin: 6px auto;
+    	transition: background-color .2s linear;
+    	&:hover{
+    		background-color: #262;
+    	}
+    	input{
+    		cursor: pointer;
+    	}
 	} 
 	.submit{
 		width: 45%;
@@ -84,12 +102,26 @@ form{
 	    border-radius: 30px;
 	    border: none;
 	    cursor: pointer;
-	    background-color: #6faf9a;
+	    background-color: #3c827e;
 	    transition: background-color .5s linear;
 	    &:hover{
-	    	background-color: #3c827e;
+	    	background-color: #72d69e;
 	    }
 	}
+}
+
+.restart{
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+footer{
+	text-align: center;
+	padding: 10px 0;
+	background-color: #aaa;
+	width: 100%;
+	position: absolute;
+	left: 0;
 }
 
 @media (max-width: 850px){

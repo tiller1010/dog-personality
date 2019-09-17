@@ -8,7 +8,7 @@ module.exports.results = {
 module.exports.questions = [
 	
 	{
-		question: "You just got a new chew toy, what do you do?",
+		question: "You just got a new toy, what do you do?",
 		answer1: {
 			Answer: "Play with it until it is broken",
 			Value: "Playful"
@@ -235,7 +235,7 @@ module.exports.questions = [
 	{
 		question: "You are tricked!",
 		answer1: {
-			Answer: "Smile at foolery",
+			Answer: "Smile and laugh at the foolery",
 			Value: "Joyful"
 		},
 		answer2: {

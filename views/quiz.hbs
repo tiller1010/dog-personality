@@ -3,39 +3,43 @@
 {{> head}}
 <body>
 
-	{{> header}}
+	<div class="container"> 
 
-	<div class="quiz banner"></div>
+		{{> header}}
 
-	<div class="content">
+		<div class="quiz banner"></div>
 
-		<h1>{{question}}</h1>
+		<div class="content">
 
-		<form action="/quiz/question/{{nextQuestion}}" method="GET">
-			<h2>Question {{questionNumber}}</h2>
+			<h1>{{question}}</h1>
 
-			<div>
-				{{answer1Answer}}: <input type="radio" name="temper" value="{{answer1Value}}"/>
-			</div>
+			<form action="/quiz/question/{{nextQuestion}}" method="GET">
+				<h2>Question {{questionNumber}}</h2>
 
-			<div>
-				{{answer2Answer}}: <input type="radio" name="temper" value="{{answer2Value}}"/>
-			</div>
+				<div class="answer-container">
+					{{answer1Answer}} <input type="radio" name="temper" value="{{answer1Value}}"/>
+				</div>
 
-			<div>
-				{{answer3Answer}}: <input type="radio" name="temper" value="{{answer3Value}}"/>
-			</div>
-			
-			<input class="submit" type="submit" value="Next" />
-		</form>
+				<div class="answer-container">
+					{{answer2Answer}} <input type="radio" name="temper" value="{{answer2Value}}"/>
+				</div>
+
+				<div class="answer-container">
+					{{answer3Answer}} <input type="radio" name="temper" value="{{answer3Value}}"/>
+				</div>
+				
+				<input class="submit" type="submit" value="Next" />
+			</form>
+
+		</div>
+
+		<div class="restart">
+			<a href="/quiz/reset">Restart Test</a>
+		</div>
 
 	</div>
 
-	{{results}}
-
-	<div>
-		<a href="/quiz/reset">Restart Test</a>
-	</div>
+	{{> footer}}
 
 </body>
 </html>
