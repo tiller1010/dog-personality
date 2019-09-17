@@ -10,11 +10,11 @@
 		<div class="quiz banner"></div>
 
 		<div class="content">
-
-			<h1>{{question}}</h1>
-
+			
+			<h2>Question {{questionNumber}}:</h2>
+		
 			<form action="/quiz/question/{{nextQuestion}}" method="GET">
-				<h2>Question {{questionNumber}}</h2>
+				<h1>{{question}}</h1>
 
 				<div class="answer-container">
 					{{answer1Answer}} <input type="radio" name="temper" value="{{answer1Value}}"/>

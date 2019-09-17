@@ -128,6 +128,20 @@ footer{
 	h1{
 		font-size: 1.5em; 
 	}
+	.start-quiz{
+		a{
+			font-size: 1.2em;
+			padding: 20px 30px;
+		}
+	}
+	.content{
+		width: 90%;
+		.answer-container{
+			input{
+				display: none;
+			}
+		}
+	}
 	form{
 		div{
 			flex-direction: column;

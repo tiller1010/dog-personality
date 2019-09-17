@@ -31,6 +31,7 @@ app.get('/quiz/question/:questionNumber', (req, res) => {
 	let questionIndex = questionNumber - 1;
 	let nextQuestion = questionNumber + 1;
 	let mostMatched = {};
+	let imageSource = "";
 
 	functions.handleSubmit(req.query.temper);
 
@@ -40,11 +41,26 @@ app.get('/quiz/question/:questionNumber', (req, res) => {
 		axios.get(`https://api.thedogapi.com/v1/breeds`)
 			.then((response) => {
 				mostMatched = functions.compareTemperamentData(response.data, prominentTraits);
-				res.render('results', {
-					prominentTraits,
-					mostMatched
-				});
-				results.reset();
+				console.log(`https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(mostMatched.name)}&searchType=image&cx=012406239918565296347:ct3dy0unhxj&key=AIzaSyD8dzKpW1aGGi20jK2Jz8_sbE1dwxMXiRE`);
+				axios.get(`https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(mostMatched.name)}%20dog&searchType=image&cx=012406239918565296347:ct3dy0unhxj&key=AIzaSyD8dzKpW1aGGi20jK2Jz8_sbE1dwxMXiRE`)
+					.then((response) => {
+						imageSource = response.data.items[0].image.thumbnailLink;
+						res.render('results', {
+							prominentTraits,
+							mostMatched,
+							imageSource
+						});
+						results.reset();
+					})
+					.catch(() => {
+						console.log('No image source')
+							res.render('results', {
+							prominentTraits,
+							mostMatched,
+							imageSource
+						});
+						results.reset();
+					});
 			})
 			.catch(() => {
 				console.log('No doggies :(')
