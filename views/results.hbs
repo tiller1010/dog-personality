@@ -7,21 +7,26 @@
 
 		{{> header}}
 
-		<div class="results-header">
-			<p>
-				You are {{prominentTraits.firstTrait}}, {{prominentTraits.secondTrait}}, and {{prominentTraits.thirdTrait}}
-			</p>
-			<p>So you are a...</p>
-			<div class="dog-name">
-				{{mostMatched.name}}
+		<div class="results-page">
+
+			<div class="results-header">
+				<p>
+					You are {{prominentTraits.firstTrait}}, {{prominentTraits.secondTrait}}, and {{prominentTraits.thirdTrait}}
+				</p>
+				<p>So you are a...</p>
 			</div>
-			<p>
-				A {{mostMatched.bred_for}} dog
-			</p>
+
+			<div class="dog-name">
+				{{mostMatched.name}}!
+			</div>
 
 			<div class="image-container">
 				<img src="{{imageSource}}" />
 			</div>
+
+			<p>
+				A {{mostMatched.bred_for}} dog
+			</p>
 
 		</div>
 

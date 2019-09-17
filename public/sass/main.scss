@@ -110,6 +110,18 @@ form{
 	}
 }
 
+.results-page{
+	text-align: center;
+	font-size: 1.4em;
+	text-transform: uppercase;
+	.dog-name{
+		font-size: 2.2em;
+	}
+	.image-container{
+		margin: 30px auto;
+	}
+}
+
 .restart{
 	margin-top: 10px;
 	margin-left: 20px;
@@ -148,6 +160,14 @@ footer{
 			input{
 				align-self: flex-end;
 			}
+		}
+	}
+	.results-page{
+		.results-header{
+			font-size: .9em;
+		}
+		.dog-name{
+			font-size: 2em;
 		}
 	}
 }
