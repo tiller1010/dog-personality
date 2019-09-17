@@ -5,6 +5,7 @@ const expressHandlebars  = require('express-handlebars');
 const port = process.env.PORT || 3000;
 
 const functions = require('./functions');
+const apiKey = require('./sensitiveData').apiKey;
 
 var questions = require('./sharedData.js').questions;
 
@@ -41,8 +42,7 @@ app.get('/quiz/question/:questionNumber', (req, res) => {
 		axios.get(`https://api.thedogapi.com/v1/breeds`)
 			.then((response) => {
 				mostMatched = functions.compareTemperamentData(response.data, prominentTraits);
-				console.log(`https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(mostMatched.name)}&searchType=image&cx=012406239918565296347:ct3dy0unhxj&key=AIzaSyD8dzKpW1aGGi20jK2Jz8_sbE1dwxMXiRE`);
-				axios.get(`https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(mostMatched.name)}%20dog&searchType=image&cx=012406239918565296347:ct3dy0unhxj&key=AIzaSyD8dzKpW1aGGi20jK2Jz8_sbE1dwxMXiRE`)
+				axios.get(`https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(mostMatched.name)}%20dog&searchType=image&cx=012406239918565296347:ct3dy0unhxj&key=${apiKey}`)
 					.then((response) => {
 						imageSource = response.data.items[0].image.thumbnailLink;
 						res.render('results', {
