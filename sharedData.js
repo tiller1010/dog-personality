@@ -143,7 +143,7 @@ module.exports.questions = [
 		}
 	},
 	{
-		question: "How would fair in an obstacle course?",
+		question: "How would you fair in an obstacle course?",
 		answer1: {
 			Answer: "I'd fair well and then some",
 			Value: "Agile"

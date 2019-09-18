@@ -5,7 +5,6 @@ const expressHandlebars  = require('express-handlebars');
 const port = process.env.PORT || 3000;
 
 const functions = require('./functions');
-//const apiKey = require('./sensitiveData').apiKey;
 const apiKey = 'AIzaSyD8dzKpW1aGGi20jK2Jz8_sbE1dwxMXiRE';
 
 var questions = require('./sharedData.js').questions;
